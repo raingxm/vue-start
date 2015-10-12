@@ -8,8 +8,26 @@
 <body>
     <div class="container">
         <div id="tasks">
-            {{ heading }}
-            <input v-model="heading"/>
+            <div>
+                <h1>Tasks</h1>
+                <ol class="list-group">
+                    <li v-repeat="task: tasks"
+                        class="list-group-item"
+                    >
+                        {{task.body}}
+                    </li>
+                </ol>
+            </div>
+
+            <form v-on="submit: addTask">
+                <div class="form-group">
+                    <input class="form-control"
+                            placeholder="I want to ..."
+                            v-model="newTask">
+                    </input>
+                </div>
+                <button class="btn btn-primary">Add Tasks</button>
+            </form>
         </div>
     </div>
 
