@@ -34,7 +34,16 @@
                 <button class="btn btn-primary">Add Tasks</button>
             </form>
 
-            <pre>{{ $data | json}}</pre>
+            <div>
+                <h2>Completed</h2>
+
+                <ol class="list-group">
+                    <li v-repeat="task: tasks | filterBy true in 'complete'"
+                        class="list-group-item">
+                        {{task.body}}
+                    </li>
+                </ol>
+            </div>
         </div>
     </div>
 

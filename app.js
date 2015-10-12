@@ -20,7 +20,7 @@ new Vue({
         addTask: function(e) {
             e.preventDefault();
 
-            if(this.newTask != "") {
+            if(this.newTask != '') {
                 this.tasks.push({
                     body: this.newTask,
                     complete: false
