@@ -2,9 +2,8 @@ new Vue({
     el: "#tasks",
 
     data: {
-        tasks: [
-            {  body: "go to home", complete: false}
-        ],
+        tasks: [],
+
         newTask: ''
     },
 
@@ -20,6 +19,12 @@ new Vue({
         completions: function() {
             return this.tasks.filter(function(task) {
                 return task.complete;
+            });
+        },
+
+        remaining: function() {
+            return this.tasks.filter(function(task) {
+                return !task.complete;
             });
         }
     },

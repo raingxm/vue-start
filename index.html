@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <div id="tasks">
-            <div>
-                <h1>Tasks ({{tasks.length}})</h1>
+            <div v-show="remaining.length">
+                <h1>Tasks ({{remaining.length}})</h1>
                 <ol class="list-group">
                     <li v-repeat="task: tasks | inProcess"
                         class="list-group-item"
