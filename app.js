@@ -22,6 +22,14 @@ new Vue({
 
         removeTask: function(task) {
             this.tasks.$remove(task);
+        },
+
+        editTask: function(task) {
+            this.removeTask(task);
+
+            this.newTask = task.body;
+
+            this.$$.newTask.focus();
         }
     }
 });
