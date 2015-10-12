@@ -12,7 +12,7 @@
             <div>
                 <h1>Tasks ({{tasks.length}})</h1>
                 <ol class="list-group">
-                    <li v-repeat="task: tasks"
+                    <li v-repeat="task: tasks | inProcess"
                         class="list-group-item"
                     >
                         <span v-on="dblclick: editTask(task)">{{task.body}}</span>

@@ -8,6 +8,14 @@ new Vue({
         newTask: ''
     },
 
+    filters: {
+        inProcess: function(tasks) {
+            return tasks.filter(function(task) {
+                return !task.complete;
+            });
+        }
+    },
+
     methods: {
         addTask: function(e) {
             e.preventDefault();
