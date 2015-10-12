@@ -16,6 +16,14 @@ new Vue({
         }
     },
 
+    computed: {
+        completions: function() {
+            return this.tasks.filter(function(task) {
+                return task.complete;
+            });
+        }
+    },
+
     methods: {
         addTask: function(e) {
             e.preventDefault();
