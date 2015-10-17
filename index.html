@@ -44,6 +44,7 @@
                     <li v-repeat="task: tasks | filterBy true in 'complete'"
                         class="list-group-item">
                         {{task.body}}
+                        <button v-on="click: markedUncomplete(task)">&#10007;</button>
                     </li>
                 </ol>
             </div>

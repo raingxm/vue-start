@@ -33,12 +33,12 @@ new Vue({
         addTask: function(e) {
             e.preventDefault();
 
-            if(this.newTask !== '') {
-                this.tasks.push({
+            if(!this.newTask) return ;
+
+            this.tasks.push({
                     body: this.newTask,
                     complete: false
                 });
-            }
 
             this.newTask = '';
         },
@@ -57,6 +57,10 @@ new Vue({
             this.newTask = task.body;
 
             this.$$.newTask.focus();
+        },
+
+        markedUncomplete: function(task) {
+            task.complete = false;
         },
 
         completeAllTasks: function() {
