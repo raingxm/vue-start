@@ -18,7 +18,7 @@
                         <span v-on="dblclick: editTask(task)">{{task.body}}</span>
 
                         <button v-on="click: removeTask(task)">&#10007;</button>
-                        <button v-on="click: completeTask(task)">&#10004;</button>
+                        <button v-on="click: toggleCompletion(task)">&#10004;</button>
                     </li>
                 </ol>
             </div>
@@ -44,7 +44,7 @@
                     <li v-repeat="task: tasks | filterBy true in 'complete'"
                         class="list-group-item">
                         {{task.body}}
-                        <button v-on="click: markedUncomplete(task)">&#10007;</button>
+                        <button v-on="click: toggleCompletion(task)">&#10007;</button>
                     </li>
                 </ol>
             </div>

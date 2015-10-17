@@ -59,8 +59,8 @@ new Vue({
             this.$$.newTask.focus();
         },
 
-        markedUncomplete: function(task) {
-            task.complete = false;
+        toggleCompletion: function(task) {
+            task.complete = ! this.complete;
         },
 
         completeAllTasks: function() {
