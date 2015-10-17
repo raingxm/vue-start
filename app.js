@@ -60,7 +60,7 @@ new Vue({
         },
 
         toggleCompletion: function(task) {
-            task.complete = ! this.complete;
+            task.complete = ! task.complete;
         },
 
         completeAllTasks: function() {
