@@ -28,10 +28,13 @@
                     <input class="form-control"
                             placeholder="I want to ..."
                             v-model="newTask"
-                            v-el="newTask">
+                            v-el="newTask"
+                    >
+
                     </input>
                 </div>
                 <button class="btn btn-primary">Add Tasks</button>
+                <button class="btn btn-default" v-on="click: completeAllTasks">Mark as all completed</button>
             </form>
 
             <div v-if="completions.length">
